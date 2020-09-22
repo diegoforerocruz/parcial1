@@ -7,3 +7,11 @@
 #text-nav-bar {
     font-family: 'Satisfy', cursive;
 }
+
+.imgcard {
+    height: 250px;
+}
+
+#cartText {
+    padding-left: 80%;
+}
