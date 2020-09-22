@@ -3,7 +3,7 @@ document.getElementById("BurguersLink").addEventListener("click", function () {r
 document.getElementById("Tacos").addEventListener("click", function () {renderFood("Tacos");} );
 document.getElementById("Salads").addEventListener("click", function () {renderFood("Salads");} );
 document.getElementById("Desserts").addEventListener("click", function () {renderFood("Desserts");} );
-document.getElementById("Drinks & Sides").addEventListener("click", function () {renderFood("Drinks and Sides");} );
+document.getElementById("Drinks").addEventListener("click", function () {renderFood("Drinks and Sides");} );
 document.getElementById("img-navbar").addEventListener("click", function () {showOrder();} );
 
 document.getElementById("modalContinueAdding").addEventListener("click", function () {continueAdding();} );
