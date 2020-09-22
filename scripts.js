@@ -1,4 +1,3 @@
-//document.getElementById("img-navbar").addEventListener("click", function () {showOrder();} );
 
 document.getElementById("BurguersLink").addEventListener("click", function () {renderFood("Burguers");} );
 document.getElementById("Tacos").addEventListener("click", function () {renderFood("Tacos");} );
@@ -47,7 +46,7 @@ async function renderFood(tipoComida) {
 
         htmlSegment=   `<div class="col-3">
                         <div class="card border-left-primary shadow h-100" id="card${cont}">
-                            <img src="${plato.image}"  class="card-img-top rounded imgcard" alt="img1">
+                            <img src="${plato.image}"  class="card-img-top rounded imgcard" alt="img${cont}">
                             <div class="card-body">
                                 <h5 class="card-title">${plato.name}</h5>
                                 <p class="card-text">${plato.description}</p>
@@ -123,7 +122,7 @@ function modifyCartNumber(cont){
 
     cartString = document.getElementById("cartText").innerText
     cartNumber = rows.length-1;
-    document.getElementById("cartText").innerHTML ="<img src=\"carrito.png\"  id=\"img-navbar\" >" +cartNumber + " Items"
+    document.getElementById("cartText").innerHTML ="<img src=\"carrito.png\"  id=\"img-navbar\" alt=\"carrito\">" +cartNumber + " Items"
     document.getElementById("img-navbar").addEventListener("click", function () {showOrder();} );
 
     let totalCash = 0
@@ -146,7 +145,7 @@ function dropOrderTable() {
     while(table.rows.length!=1){
         table.deleteRow(table.rows.length-1)
     }
-    document.getElementById("cartText").innerHTML ="<img src=\"carrito.png\"  id=\"img-navbar\" >" +0 + " Items"
+    document.getElementById("cartText").innerHTML ="<img src=\"carrito.png\"  id=\"img-navbar\"  alt=\"carrito\">" +0 + " Items"
     document.getElementById("img-navbar").addEventListener("click", function () {showOrder();} );
     document.getElementById("totalaccount").innerHTML = `<p><strong>Total: $ 0</strong></p>`
 }
